@@ -21,13 +21,14 @@ $(function () {
     createPlatform(-50, canvas.height - 10, canvas.width + 100, 200, "navy"); // bottom wall
     createPlatform(-50, -50, 50, canvas.height + 500); // left wall
     createPlatform(canvas.width, -50, 50, canvas.height + 100); // right wall
+    createBadPlatform(450, 600, 100, 20, "red")
 
     //////////////////////////////////
     // ONLY CHANGE BELOW THIS POINT //
     //////////////////////////////////
 
     // TODO 1 - Enable the Grid
-     toggleGrid();
+     
 
 
     // TODO 2 - Create Platforms
