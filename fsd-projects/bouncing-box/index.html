@@ -19,7 +19,7 @@
         left: 0px;
       }
 body {
- background-image: url("https://starwalk.space/en/news/what-is-space");
+ background-image: url("https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg");
  background-color: #070095;
 }
       .board {
@@ -58,8 +58,9 @@ body {
         box.on("click", handleBoxClick);
 
         // moves the Box to a new position on the screen along the X-Axis
-        function moveBoxTo(newPositionX) {
+        function moveBoxTo(newPositionX, newPositionY) {
           box.css("left", newPositionX);
+          box.css("top", newPositionY);
         }
 
         // changes the text displayed on the Box
@@ -75,7 +76,9 @@ body {
 var positionX = 0;
 var points = 0; 
 var speed = 10; 
-
+var positionY;
+var speedY;
+var boardHeight = jQuery(window).height();
 
         /**
          * This Function will be called 20 times/second.
@@ -83,7 +86,7 @@ var speed = 10;
          * If the box drifts off the screen, turn it around!
          */
         function update() {
-moveBoxTo(positionX); // Moves box to x-position 200
+moveBoxTo(positionX, positionY); // Moves box to x-position 200
  positionX = positionX + speed;     
 if (positionX > boardWidth) {
   // Code to reverse speed goes here
